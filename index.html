@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Lemos</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+            background-color: white; /* Cor de fundo branca */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centraliza horizontalmente */
+            flex-grow: 1; /* Ocupa todo o espaço vertical disponível */
+            flex-direction: column; /* Empilhar o conteúdo verticalmente */
+            margin-top: -50px; /* Margem superior para garantir visibilidade */
+        }
+
+        .center {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1; /* Removendo o espaçamento entre as linhas */
+            margin-top: 50px; /* Margem superior para movê-lo para cima */
+        }
+
+        .name {
+            margin-bottom: -10px; /* Ajustando a margem inferior para aproximar "André Lemos" de "Psicólogo" */
+        }
+
+        .job-title {
+            font-size: 15px; /* Reduzindo ainda mais o tamanho da fonte para a palavra "Psicólogo" */
+            margin-top: -5px; /* Ajustando a margem superior para aproximar "Psicólogo" de "André Lemos" */
+            position: relative;
+        }
+
+        .job-title::before,
+        .job-title::after {
+            content: "";
+            position: absolute;
+            width: 30%; /* Ajustando a largura para remover a parte do meio das linhas */
+            border-top: 1px solid black;
+            top: 50%;
+        }
+
+        .job-title::before {
+            left: 0;
+        }
+
+        .job-title::after {
+            right: 0;
+        }
+
+        .address {
+            font-size: 12px; /* Reduzindo o tamanho da fonte para o endereço */
+            text-align: center;
+            margin-top: 20px; /* Espaço entre o endereço e o resto do conteúdo */
+            margin-bottom: 20px; /* Margem inferior para movê-lo para cima */
+        }
+
+        /* Botão */
+        .button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin-top: 3px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        /* Estilos para a imagem */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -50px; /* Margem superior para mover a imagem para cima */
+            margin-bottom: 20px; /* Margem inferior para mover a imagem para cima */
+        }
+
+        .image-container img {
+            max-width: 80%; /* Largura máxima da imagem */
+            height: auto;
+        }
+
+        /* Media query para telas maiores */
+        @media screen and (min-width: 768px) {
+            .container {
+                margin-top: -200px; /* Ajuste maior para telas maiores */
+            }
+            .center {
+                margin-top: 200px; /* Ajuste maior para telas maiores */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <span class="name">André Lemos</span> <br>
+            <h2 class="job-title">Psicólogo</h2>
+        </div>
+        <a href="https://wa.me/556192558044" class="button">contact</a>
+    </div>
+    <div class="image-container">
+        <img src="https://cdn.discordapp.com/attachments/1237922929736679537/1238227621771477063/mental-health-2313430_1920.jpg?ex=663e84d6&is=663d3356&hm=78c54762ab67d7757d04317a8109e183daa3c6b00c743e993780dc3623820826" alt="Imagem de Saúde Mental">
+    </div>
+    <p class="address">QNM 03 "Conjunto "O" Lote 37, SL 103, St. M Eqnm 1/3 Bl D Conjunto O, 37 - SL 103 - Ceilândia, Brasília - DF, 72215-045</p>
+</body>
+</html>
